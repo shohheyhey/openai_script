@@ -1,8 +1,9 @@
 require 'net/http'
 require 'uri'
 require 'json'
+require_relative "./key"
 
-api_key = ENV['OPENAI_API_KEY']
+api_key = get_key
 
 # OpenAIのAPIエンドポイント
 uri = URI.parse("https://api.openai.com/v1/chat/completions")
